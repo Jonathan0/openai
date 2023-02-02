@@ -7,11 +7,26 @@ jobs:
     steps:
       - checkout
       - run:
+          name: 'Install Chrome Browser'
+          command: |
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo apt install ./google-chrome-stable_current_amd64.deb
+            rm ./google-chrome-stable_current_amd64.deb
+      - run:
           name: 'Build and Run OpenAI'
-          background: false
+          background: true
           command: |
             npm install
             npm run dev && sleep 360
+      - run:
+          name: 'Install Cypress and Run UI Tests'
+          command: |
+            npm install
+            npm run test
+      - store_test_results:
+          path: ~/project/cypress/result.xml
+      - store_artifacts:
+          path: ~/project/cypress/result.xml
 
 #  sonar-scan:
 #    docker:
