@@ -1,0 +1,64 @@
+version: 2.1
+
+jobs:
+  build-openai:
+    machine:
+      image: ubuntu-2004:202104-01
+    steps:
+      - checkout
+      - run:
+          name: 'Build and Run OpenAI'
+          background: true
+          command: |
+            npm install
+            npm run dev && sleep 360
+
+#  sonar-scan:
+#    docker:
+#      - image: 'circleci/openjdk:11-jdk'
+#    steps:
+#      - checkout
+#      - run:
+#          name: Analyze on SonarCloud
+#          command: ./gradlew clean build sonarqube
+
+#  build-docker:
+#    machine:
+#      image: ubuntu-2004:202104-01
+#    steps:
+#      - checkout
+#      - attach_workspace:
+#          at: .
+#      - run:
+#          name: 'Build Docker: truck-api-framework'
+#          command: |
+#            echo The Docker tag is ${CIRCLE_SHA1:0:6}
+#            docker build -f dockerfile/Dockerfile -t truck-api-framework:latest -t truck-api-framework:${CIRCLE_SHA1:0:6} .
+#      - run:
+#          name: 'Publish to my private docker hub'
+#          command: |
+#            docker login --username $DOCKER_USER --password $DOCKER_PWD
+#            docker tag truck-api-framework:latest $DOCKER_USER/trucks
+#            docker tag truck-api-framework:${CIRCLE_SHA1:0:6} $DOCKER_USER/trucks
+#            docker push --all-tags $DOCKER_USER/trucks
+
+workflows:
+  build-trucks-workflow:
+    jobs:
+      - build-openai
+#      - sonar-scan
+#      - build-docker:
+#          requires:
+#            - build-trucks
+#            - sonar-scan
+
+#  nightly-workflow:
+#    jobs:
+#      - build-trucks
+#    triggers:
+#      - schedule:
+#          cron: "0 2 * * *"
+#          filters:
+#            branches:
+#              only:
+#                - main
