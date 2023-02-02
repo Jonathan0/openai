@@ -1,5 +1,5 @@
 # openai
-Self demo open AI tests
+React Open AI Demo tests
 
 1. Install the requirements
 
