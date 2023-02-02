@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: 'Build and Run OpenAI'
-          background: true
+          background: false
           command: |
             npm install
             npm run dev && sleep 360
