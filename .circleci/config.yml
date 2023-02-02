@@ -27,7 +27,7 @@ jobs:
       - store_test_results:
           path: ~/project/cypress/result.xml
       - store_artifacts:
-          path: ~/project/cypress/result.xml
+          path: ~/project/cypress/videos
 
 #  sonar-scan:
 #    docker:
