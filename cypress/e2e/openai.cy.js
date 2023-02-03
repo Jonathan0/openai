@@ -23,6 +23,6 @@ describe('openAI animal name test', () => {
     // save to file
     let tmp = dictionary.join("\n ").toString();
     cy.log(tmp);
-    cy.writeFile('cypress/animalName.json', tmp, 'utf8');
+    cy.writeFile('cypress/json/animalName.json', tmp, 'utf8');
   })
 })
