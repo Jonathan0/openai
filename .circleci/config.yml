@@ -69,13 +69,13 @@ workflows:
 #            - build-trucks
 #            - sonar-scan
 
-#  nightly-workflow:
-#    jobs:
-#      - build-trucks
-#    triggers:
-#      - schedule:
-#          cron: "0 2 * * *"
-#          filters:
-#            branches:
-#              only:
-#                - main
+  nightly-workflow:
+    jobs:
+      - build-openai
+    triggers:
+      - schedule:
+          cron: "20 * * * *"
+          filters:
+            branches:
+              only:
+                - main
