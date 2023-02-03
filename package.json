@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test": "npx cypress run --spec \"cypress/e2e/openai.cy.js\" --reporter junit --reporter-options mochaFile=cypress/result.xml,toConsole=true",
+    "test": "npx cypress run --browser chrome --spec \"cypress/e2e/openai.cy.js\" --reporter junit --reporter-options mochaFile=cypress/result.xml,toConsole=true",
     "cypress": "npx cypress open"
   },
   "dependencies": {
