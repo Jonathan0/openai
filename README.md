@@ -12,3 +12,9 @@ React Open AI Demo tests
    ```bash
    $ npm run dev
    ```
+   
+3. Run the cypress UI test
+
+   ```bash
+   $ npm run test
+   ```
