@@ -49,12 +49,13 @@ export default async function (req, res) {
 }
 
 function generatePrompt(country) {
-  const capitalizedcountry =
-    country[0].toUpperCase() + country.slice(1).toLowerCase();
-  return `Suggest three places to visit in a country.
-Country: United States
+  const capitalizedcountry = country.toUpperCase();
+    // country[0].toUpperCase() + country.slice(1).toLowerCase();
+  return `Suggest three places to visit that is very popular.
+
+Country: UNITED STATES
 Places: Grand canyon, Statue of liberty, Maui
-Country: China
+Country: CHINA
 Places: Shanghai, The Great Wall, Terracotta warriors
 Country: ${capitalizedcountry}
 Places:`;
