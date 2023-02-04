@@ -53,9 +53,9 @@ function generatePrompt(country) {
     country[0].toUpperCase() + country.slice(1).toLowerCase();
   return `Suggest three places to visit in a country.
 Country: United States
-Places: Boston, New York, Los Angeles
+Places: Grand canyon, Statue of liberty, Maui
 Country: China
-Places: Beijing, Shanghai, Guangzhou
+Places: Shanghai, The Great Wall, Terracotta warriors
 Country: ${capitalizedcountry}
 Places:`;
 }
