@@ -1,13 +1,15 @@
 const fs = require('fs');
 
 describe('openAI country places test', () => {
+  // preload test data from a fixture json file
+  beforeEach(function () {
+      cy.fixture('countries').then((countries) => {
+        this.countries = countries
+      })
+    });
 
-  it('visit the openAI local home page', () => {
-    const country = ["France", "Spain", "United States", "Italy", "Turkiey", "Germany", "Mexico", "Indian",
-        "United Kingdom", "China", "Greece", "Thailand", "Australia", "Canada", "Japan", "Portugal", "Netherlands",
-        "Austria", "Russia", "Indonesia", "Morocco", "Malaysia", "South Korea", "Vietnam", "Singapore", "South Africa",
-        "Egypt", "Qatar", "United Arab Emirates", "Costa Rica", "Colombia", "Norway", "Switzerland", "Dominican Republic",
-        "Croatia", "The Bahamas", "New Zealand", "Ukraine", "Hungary", "Israel", "Brazil", "Chile", "Philippines"];
+  it('visit the openAI local home page', function () {
+    const country = this.countries.names;
     let dictionary = "";
 
     cy.on('uncaught:exception', (err, runnable) => { return false; });
