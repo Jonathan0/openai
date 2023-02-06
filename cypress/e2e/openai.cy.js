@@ -45,7 +45,7 @@ describe('openAI country places test', () => {
           cy.get('input[name="question"]').clear().type(name);
           cy.get('#__next > div > main > form:nth-child(7) > input[type=text]:nth-child(1)').should('be.visible');
           cy.get('#__next > div > main > form:nth-child(7) > input[type=submit]:nth-child(2)').click();
-          cy.wait(1500);
+          cy.wait(2000);
           cy.get('#__next > div > main > div:nth-child(8)').should('be.visible');
           cy.get('#__next > div > main > div:nth-child(8)').then($value => {
               // save to file
