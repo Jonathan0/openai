@@ -54,8 +54,8 @@ export default async function (req, res) {
 }
 
 function generatePrompt(question) {
-  const capitalizedquestion = question.toUpperCase();
-    // question[0].toUpperCase() + question.slice(1).toLowerCase();
+  // const capitalizedquestion = question.toUpperCase();
+  // question[0].toUpperCase() + question.slice(1).toLowerCase();
   return `I am a highly intelligent question answering bot.
 
 If you ask me a question that is rooted in truth, I will give you the answer.
@@ -82,6 +82,6 @@ A: The 1992 Olympics were held in Barcelona, Spain.
 Q: How many squigs are in a bonk?
 A: Unknown
 
-Q: ${capitalizedquestion}
+Q: ${question}
 A:`;
 }

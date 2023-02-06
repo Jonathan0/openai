@@ -39,7 +39,7 @@ describe('openAI country places test', () => {
 
       cy.on('uncaught:exception', (err, runnable) => { return false; });
       cy.visit('http://localhost:3000');
-      for(let i=0; i<5; i++) {
+      for(let i=0; i<10; i++) {
           cy.wait(500);
           const name = question[Math.floor(Math.random() * question.length)];
           cy.get('input[name="question"]').clear().type(name);
