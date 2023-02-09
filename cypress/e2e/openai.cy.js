@@ -11,27 +11,27 @@ describe('openAI country places test', () => {
       })
     });
 
-//  it('openAI search country test', function () {
-//    const country = this.countries.names;
-//    let dictionary = "";
-//
-//    cy.on('uncaught:exception', (err, runnable) => { return false; });
-//    cy.visit('http://localhost:3000');
-//    for(let i=0; i<20; i++) {
-//        cy.wait(500);
-//        const name = country[Math.floor(Math.random() * country.length)];
-//        cy.get('input[name="country"]').clear().type(name);
-//        cy.get('#__next > div > main > form:nth-child(3) > input[type=text]:nth-child(1)').should('be.visible');
-//        cy.get('#__next > div > main > form:nth-child(3) > input[type=submit]:nth-child(2)').click();
-//        cy.wait(1500);
-//        cy.get('#__next > div > main > div:nth-child(4)').should('be.visible');
-//        cy.get('#__next > div > main > div:nth-child(4)').then($value => {
-//            // save to file
-//            const places = $value.text();
-//            cy.writeFile('cypress/json/' + name + "Name.json", places, 'utf8');
-//        })
-//    }
-//  })
+  it('openAI search country test', function () {
+    const country = this.countries.names;
+    let dictionary = "";
+
+    cy.on('uncaught:exception', (err, runnable) => { return false; });
+    cy.visit('http://localhost:3000');
+    for(let i=0; i<20; i++) {
+        cy.wait(500);
+        const name = country[Math.floor(Math.random() * country.length)];
+        cy.get('input[name="country"]').clear().type(name);
+        cy.get('#__next > div > main > form:nth-child(3) > input[type=text]:nth-child(1)').should('be.visible');
+        cy.get('#__next > div > main > form:nth-child(3) > input[type=submit]:nth-child(2)').click();
+        cy.wait(1500);
+        cy.get('#__next > div > main > div:nth-child(4)').should('be.visible');
+        cy.get('#__next > div > main > div:nth-child(4)').then($value => {
+            // save to file
+            const places = $value.text();
+            cy.writeFile('cypress/json/' + name + "Name.json", places, 'utf8');
+        })
+    }
+  })
 
   it('openAI find answers test', function () {
       const question = this.questions.lists;
