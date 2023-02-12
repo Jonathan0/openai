@@ -20,6 +20,7 @@ cypress/json
 # misc
 .DS_Store
 .idea
+.firebase/
 
 # debug
 npm-debug.log*
