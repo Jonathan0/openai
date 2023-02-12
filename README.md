@@ -18,3 +18,12 @@ React Open AI Demo tests
    ```bash
    $ npm run test
    ```
+
+4. To deploy into firebase
+   ```bash
+   $ npm run build
+   ```
+
+   ```bash
+   $ npm run deploy
+   ```
