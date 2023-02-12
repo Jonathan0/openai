@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "deploy": "npx firebase deploy",
     "test": "npx cypress run --browser chrome --spec \"cypress/e2e/openai.cy.js\" --reporter junit --reporter-options mochaFile=cypress/result.xml,toConsole=true",
