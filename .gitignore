@@ -21,6 +21,7 @@ cypress/json
 .DS_Store
 .idea
 .firebase/
+.firebaserc
 
 # debug
 npm-debug.log*
