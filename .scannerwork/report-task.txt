@@ -1,0 +1,7 @@
+organization=jonathan0
+projectKey=jonathan0_openai
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.37873
+dashboardUrl=https://sonarcloud.io/dashboard?id=jonathan0_openai
+ceTaskId=AYZnB12I9J6q1FF3UNZa
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AYZnB12I9J6q1FF3UNZa

@@ -8,7 +8,8 @@
     "start": "next start",
     "deploy": "npx firebase deploy",
     "test": "npx cypress run --browser chrome --spec \"cypress/e2e/openai.cy.js\" --reporter junit --reporter-options mochaFile=cypress/result.xml,toConsole=true",
-    "cypress": "npx cypress open"
+    "cypress": "npx cypress open",
+    "sonar": "node cypress/support/sonar_scan.js"
   },
   "dependencies": {
     "next": "^13.1.6",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "cypress": "^12.5.1",
-    "firebase-tools": "^11.22.0"
+    "firebase-tools": "^11.22.0",
+    "sonarqube-scanner": "^3.0.1"
   }
 }

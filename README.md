@@ -27,3 +27,9 @@ React Open AI Demo tests
    ```bash
    $ npm run deploy
    ```
+
+5. [SonarCloud Scan the repo](https://www.npmjs.com/package/sonarqube-scanner)
+   First setup the environment variable `OPENAI_SONAR_TOKEN`, then run: 
+   ```bash
+   $ npm run sonar
+   ```
