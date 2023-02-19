@@ -33,15 +33,15 @@ jobs:
           path: ~/project/cypress/json
 
   sonar-scan:
-    machine:
-      image: ubuntu-2004:202101-01
+    docker:
+      - image: 'circleci/node'
     steps:
       - checkout
       - run:
           name: Analyze on SonarCloud
           command: |
             npm install
-            sleep 15
+            sleep 10
             npm run sonar
 
 #  build-docker:
