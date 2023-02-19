@@ -40,7 +40,7 @@ jobs:
       - run:
           name: Analyze on SonarCloud
           command: |
-            sudo apt upgrade -y
+            sudo apt upgrade --allow
             npm install
             npm run sonar
 
