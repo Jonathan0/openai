@@ -13,7 +13,6 @@ describe('openAI country places test', () => {
 
   it('openAI search country test', function () {
     const country = this.countries.names;
-    let dictionary = "";
 
     cy.on('uncaught:exception', (err, runnable) => { return false; });
     cy.visit('http://localhost:3000');
@@ -35,7 +34,6 @@ describe('openAI country places test', () => {
 
   it('openAI find answers test', function () {
       const question = this.questions.lists;
-      let dictionary = "";
 
       cy.on('uncaught:exception', (err, runnable) => { return false; });
       cy.visit('http://localhost:3000');
