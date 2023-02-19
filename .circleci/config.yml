@@ -40,8 +40,8 @@ jobs:
       - run:
           name: Analyze on SonarCloud
           command: |
-            sudo apt upgrade --allow
             npm install
+            sleep 15
             npm run sonar
 
 #  build-docker:
