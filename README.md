@@ -1,6 +1,8 @@
 # openai
 React Open AI Demo tests
 
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jonathan0_openai&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=jonathan0_openai)
+
 1. Install the requirements
 
    ```bash
