@@ -5,7 +5,7 @@
 
 # testing
 /coverage
-cypress/screenshot
+cypress/screenshots
 cypress/videos
 cypress/result.xml
 cypress/json
