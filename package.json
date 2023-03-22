@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "cypress": "^12.7.0",
-    "firebase-tools": "^11.24.0",
+    "firebase-tools": "^11.25.1",
     "sonarqube-scanner": "^3.0.1"
   }
 }
