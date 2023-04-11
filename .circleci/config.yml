@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   build-openai:
     machine:
-      image: ubuntu-2004:202101-01
+      image: ubuntu-2204:current
     steps:
       - checkout
       - run:
@@ -22,8 +22,7 @@ jobs:
       - run:
           name: 'Install Cypress and Run UI Tests'
           command: |
-            npm install
-            sleep 15
+            sleep 25
             npm run test
       - store_test_results:
           path: ~/project/cypress/result.xml
