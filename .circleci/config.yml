@@ -18,12 +18,11 @@ jobs:
           background: true
           command: |
             npm install
-            npm run start && sleep 360
+            npm run dev && sleep 360
       - run:
           name: 'Install Cypress and Run UI Tests'
           command: |
-            npm install
-            sleep 15
+            sleep 25
             npm run test
       - store_test_results:
           path: ~/project/cypress/result.xml
