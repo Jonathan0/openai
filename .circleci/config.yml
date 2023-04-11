@@ -18,7 +18,7 @@ jobs:
           background: true
           command: |
             npm install
-            npm run dev && sleep 360
+            npm run start && sleep 360
       - run:
           name: 'Install Cypress and Run UI Tests'
           command: |
