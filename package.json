@@ -12,8 +12,8 @@
     "sonar": "node cypress/support/sonar_scan.js"
   },
   "dependencies": {
-    "next": "^13.3.0",
-    "openai": "^3.2.1",
+    "next": "^13.4.7",
+    "openai": "^3.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -21,8 +21,8 @@
     "node": ">=14.6.0"
   },
   "devDependencies": {
-    "cypress": "^12.9.0",
-    "firebase-tools": "^11.25.1",
+    "cypress": "^12.16.0",
+    "firebase-tools": "^12.4.0",
     "sonarqube-scanner": "^3.0.1"
   }
 }
