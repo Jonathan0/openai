@@ -70,13 +70,13 @@ workflows:
           filters:
             branches:
               only:
-                - feature/.*
+                - /^feature\/.*
                 - main
       - sonar-scan:
           filters:
             branches:
               only:
-                - feature/.*
+                - /^feature\/.*
                 - main
 #      - build-docker:
 #          requires:
