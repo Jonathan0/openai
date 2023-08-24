@@ -66,8 +66,18 @@ jobs:
 workflows:
   build-openai-workflow:
     jobs:
-      - build-openai
-      - sonar-scan
+      - build-openai:
+          filters:
+            branches:
+              only:
+                - /feature/.*
+                - main
+      - sonar-scan:
+          filters:
+            branches:
+              only:
+                - /feature/.*
+                - main
 #      - build-docker:
 #          requires:
 #            - build-trucks
