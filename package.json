@@ -21,7 +21,7 @@
     "node": ">=14.6.0"
   },
   "devDependencies": {
-    "cypress": "^12.16.0",
+    "cypress": "^13.0.0",
     "firebase-tools": "^12.4.0",
     "sonarqube-scanner": "^3.0.1"
   }
